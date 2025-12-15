@@ -1,31 +1,8 @@
-<svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Barra crema/beige horizontal con LEXIS -->
+  <rect width="200" height="50" fill="#8b7355"/>
   
-  <!-- Letra L -->
-  <path d="M 8 12 L 8 38 L 18 38 L 18 22 L 28 22 L 28 12 Z" fill="url(#logoGradient)"/>
-  
-  <!-- Letra E -->
-  <path d="M 35 12 L 35 38 L 45 38 L 45 28 L 55 28 L 55 22 L 45 22 L 45 18 L 60 18 L 60 12 Z" fill="url(#logoGradient)"/>
-  
-  <!-- Letra X -->
-  <path d="M 68 12 L 78 22 L 73 27 L 83 37 L 73 38 L 63 28 L 68 23 L 58 12 Z" fill="#4a90e2"/>
-  <path d="M 83 12 L 73 22 L 78 27 L 68 37 L 78 38 L 88 28 L 83 23 L 93 12 Z" fill="#4a90e2"/>
-  
-  <!-- Letra I -->
-  <path d="M 95 12 L 105 12 L 105 38 L 95 38 Z" fill="url(#logoGradient)"/>
-  
-  <!-- Letra S -->
-  <path d="M 112 12 L 127 12 L 127 20 L 117 20 L 117 25 L 127 25 L 127 33 L 112 33 L 112 38 L 127 38 L 127 30 L 117 30 L 117 20 L 127 20 L 127 12 Z" fill="#4a90e2"/>
-  
-  <!-- Línea decorativa -->
-  <line x1="8" y1="42" x2="127" y2="42" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round"/>
-  
-  <!-- Punto decorativo -->
-  <circle cx="135" cy="27" r="3" fill="#4a90e2"/>
+  <!-- Texto LEXIS en blanco, centrado en la barra -->
+  <text x="100" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="300" fill="#ffffff" text-anchor="middle" letter-spacing="4">LEXIS</text>
 </svg>
 
