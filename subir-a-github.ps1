@@ -7,7 +7,7 @@ Write-Host "Agregando cambios..." -ForegroundColor Cyan
 git add .
 
 Write-Host "Haciendo commit..." -ForegroundColor Cyan
-git commit -m "Actualizaciones: cambios en index, script e imagenes"
+git commit -m "Actualizaciones recientes"
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Subiendo a GitHub..." -ForegroundColor Cyan
