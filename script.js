@@ -93,19 +93,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Reproducción automática del video cuando entra en vista
+// Reproducción automática del video cuando entra en vista (solo una vez)
 const aboutVideo = document.querySelector('.about-video');
 if (aboutVideo) {
+    let hasPlayed = false; // Variable para rastrear si ya se reprodujo
+    
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Reproducir el video cuando entra en vista
-                aboutVideo.play().catch(error => {
+            if (entry.isIntersecting && !hasPlayed) {
+                // Reproducir el video cuando entra en vista (solo una vez)
+                aboutVideo.play().then(() => {
+                    hasPlayed = true;
+                    // Desconectar el observer después de reproducir
+                    videoObserver.disconnect();
+                }).catch(error => {
                     console.log('Autoplay bloqueado:', error);
+                    // Si el autoplay está bloqueado, marcar como reproducido para no intentar de nuevo
+                    hasPlayed = true;
+                    videoObserver.disconnect();
                 });
-            } else {
-                // Pausar el video cuando sale de vista (opcional)
-                // aboutVideo.pause();
             }
         });
     }, {
